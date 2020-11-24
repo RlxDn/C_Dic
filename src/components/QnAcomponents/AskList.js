@@ -7,13 +7,14 @@ class AskList extends Component {
         return this.props.qs !== nextProps.qs;
     }
     render() {
-        const {qs, onRemove} = this.props;
+        const {qs, onRemove, onChange} = this.props;
         const qList = qs.map(
             ({id, q}) => (
                 <Asks
                     id={id}
                     q={q}
                     onRemove={onRemove}
+                    onChange={onChange}
                     key={id}
                 />
             )

@@ -1,13 +1,13 @@
 import React, {Component} from 'react';
 import styled from 'styled-components';
 
-const Remove=styled.button`
+const Inter=styled.button`
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     padding-left: 1rem;
     padding-right: 1rem;
-    margin-left: 1rem;   
-    margin-right: 1rem;
+    margin-left: 0.5rem;   
+    margin-right: 0.5rem;
     color: #e64980;
     font-weight: 600;
     background: #22b8cf;
@@ -31,7 +31,7 @@ const Qitem=styled.div`
     user-select: none;
     &:hover {
         background: #e3fafc;
-        ${Remove}{
+        ${Inter}{
             opacity: 1;
         }
     }
@@ -44,14 +44,18 @@ const Q=styled.div`
 
 class Asks extends Component {
     render() {
-        const {q, id, onRemove} = this.props;
+        const {q, id, onRemove, onChange} = this.props;
         return (
             <Qitem>
-                <Remove onClick={(e) => {
+                    <Q>{q}</Q>
+                    <Inter onClick={(e) => {
+                        e.stopPropagation();
+                        onChange(id)}
+                    }>수정</Inter>
+                    <Inter onClick={(e) => {
                     e.stopPropagation();
                     onRemove(id)}
-                }>삭제</Remove>
-                    <Q>{q}</Q>
+                }>삭제</Inter>
             </Qitem>
         );
     }

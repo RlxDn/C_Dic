@@ -22,12 +22,12 @@ const Titleb = styled.div`
   padding-bottom: 400px;
 `;
 
-const Suba = styled.div`
-  font-family: 'Do Hyeon', sans-serif;
-  font-size: 10vh;
-  justify-content: center;
-  text-align: center;
-`;
+// const Suba = styled.div`
+//   font-family: 'Do Hyeon', sans-serif;
+//   font-size: 10vh;
+//   justify-content: center;
+//   text-align: center;
+// `;
 
 // const Txt=styled.div`
 //   font-family: 'Do Hyeon', sans-serif;
@@ -38,7 +38,6 @@ class Home extends Component {
       <>
         <Titlea>전 세계를 위한 사전,</Titlea>
         <Titleb>문화사전</Titleb>
-        <Suba>All curtures in Korea</Suba>
       </>
     );
   }

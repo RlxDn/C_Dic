@@ -35,13 +35,17 @@ class QnA extends Component {
       qs: qs.filter(qx => qx.id !== id)
     });
   }
+  handleUpdate = (id, ) => {
+    
+  }
   render() {
     const {input, qs} = this.state;
     const {
       handleChange,
       handleCreate,
       handleKeyPress,
-      handleRemove
+      handleRemove,
+      handleEdit
     } = this;
 
     return (
@@ -53,7 +57,7 @@ class QnA extends Component {
           onCreate={handleCreate}
         />
       )}>
-      <AskList qs={qs} onRemove={handleRemove}/>
+      <AskList qs={qs} onRemove={handleRemove} onChange={handleEdit}/>
     </QnATemplate>
     );
   }
