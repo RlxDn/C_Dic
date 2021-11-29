@@ -1,8 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+@import url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/stylesheets/NotoSansKR-Hestia.css);
 body {
   margin: 0;
   padding: 0;
-  background: #F9F9F9;
+
+  width: 100%;
+  height: 100%;
+  
+  text-decoration: none!important;
+  font-family: 'Noto Sans KR';
 }
 
 code {

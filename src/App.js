@@ -1,17 +1,15 @@
 import React, { Component } from "react";
 import { Link, BrowserRouter, Switch, Route } from "react-router-dom";
 import styled from "styled-components";
-import School from "./components/School";
-import Cafe from "./components/Cafe";
-import QnA from "./components/QnA";
-import Kor from "./components/Kor";
-import Land from "./components/Land";
+import Recommendation from "./components/Recommendation";
+import Auction from "./components/Auction";
+import FAQ from "./components/FAQ";
+import Contact from "./components/Contact";
 import Home from "./components/Home";
 
 const Body = styled.div`
   width: 100%;
   height: 100%;
-  background-color: #f9f9f9;
 `;
 const NavWrapper = styled.div`
   display: flex;
@@ -23,12 +21,12 @@ const NavWrapper = styled.div`
 const Nav = styled.button`
   flex-grow: 0.1;
   height: 5vh;
-  width: 20vh;
+  width: 40vh;
   border: none;
-  text-decoration: none;
+  background-color: #2e2e2e;
+  color: gray;
   &:hover {
-    background-color: #dfdfdf;
-    color: #848484;
+    color: orange;
   }
 `;
 
@@ -44,38 +42,32 @@ class App extends Component {
               </Link>
             </Nav>
             <Nav>
-              <Link className="Link" to="/atschool">
-                AtSchool
+              <Link className="Link" to="/rec">
+                Recommendation
               </Link>
             </Nav>
             <Nav>
-              <Link className="Link" to="/cafe">
-                Restaurant
+              <Link className="Link" to="/auc">
+                Auction
               </Link>
             </Nav>
             <Nav>
-              <Link className="Link" to="/kor">
-                Korean Food
+              <Link className="Link" to="/con">
+                Contact Us
               </Link>
             </Nav>
             <Nav>
-              <Link className="Link" to="/land">
-                Landmark
-              </Link>
-            </Nav>
-            <Nav>
-              <Link className="Link" to="/qna">
-                Q&A
+              <Link className="Link" to="/faq">
+                FAQ
               </Link>
             </Nav>
           </NavWrapper>
           <Switch>
             <Route path="/home" component={Home} />
-            <Route path="/atschool" component={School} />
-            <Route path="/cafe" component={Cafe} />
-            <Route path="/qna" component={QnA} />
-            <Route path="/kor" component={Kor} />
-            <Route path="/land" component={Land} />
+            <Route path="/rec" component={Recommendation} />
+            <Route path="/auc" component={Auction} />
+            <Route path="/faq" component={FAQ} />
+            <Route path="/con" component={Contact} />
           </Switch>
         </BrowserRouter>
       </Body>
