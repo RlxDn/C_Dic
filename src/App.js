@@ -1,12 +1,17 @@
 import React, { Component } from "react";
-import { Link, BrowserRouter, Switch, Route } from "react-router-dom";
-import styled from "styled-components";
+import { Link, BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
+import styled, { createGlobalStyle } from "styled-components";
 import Recommendation from "./components/Recommendation";
 import Auction from "./components/Auction";
 import FAQ from "./components/FAQ";
 import Contact from "./components/Contact";
 import Home from "./components/Home";
 
+const GlobalStyle = createGlobalStyle`
+  a {
+    text-decoration: none;
+  }
+`;
 const Body = styled.div`
   width: 100%;
   height: 100%;
@@ -24,8 +29,12 @@ const Nav = styled.button`
   width: 40vh;
   border: none;
   background-color: #2e2e2e;
-  color: gray;
-  &:hover {
+  color: grey;
+  & a:visited {
+    text-decoration: none;
+    color: gray;
+  }
+  & a:visited:hover {
     color: orange;
   }
 `;
@@ -34,6 +43,7 @@ class App extends Component {
   render() {
     return (
       <Body>
+        <GlobalStyle />
         <BrowserRouter>
           <NavWrapper>
             <Nav>
@@ -68,6 +78,7 @@ class App extends Component {
             <Route path="/auc" component={Auction} />
             <Route path="/faq" component={FAQ} />
             <Route path="/con" component={Contact} />
+            <Redirect exact from="/" to="/home" />
           </Switch>
         </BrowserRouter>
       </Body>

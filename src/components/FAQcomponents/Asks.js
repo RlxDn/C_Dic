@@ -10,7 +10,7 @@ const Inter=styled.button`
     margin-right: 0.5rem;
     color: #e64980;
     font-weight: 600;
-    background: #22b8cf;
+    background: orange;
     border-radius: 3px;
     border: none;
     color: white;
@@ -19,7 +19,7 @@ const Inter=styled.button`
     opacity: 0;
     transition: 0.15s;
     &:hover {
-        background: #3bc9db;
+        background: #FFB122;
     }
 `;
 const Qitem=styled.div`
@@ -30,7 +30,7 @@ const Qitem=styled.div`
     transition: all 0.15s;
     user-select: none;
     &:hover {
-        background: #e3fafc;
+        background: #FFF7E7;
         ${Inter}{
             opacity: 1;
         }

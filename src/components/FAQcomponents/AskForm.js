@@ -16,7 +16,7 @@ const Create = styled.button`
     padding-left: 2rem;
     padding-right: 2rem;
     margin-left: 1rem;
-    background: #22b8cf;
+    background: orange;
     border-radius: 3px;
     border: none;
     color: white;
@@ -24,7 +24,7 @@ const Create = styled.button`
     font-size: 20px;
     cursor: pointer;
     &:hover {
-        background: #3bc9db;
+        background: #FFB122;
     }
 `;
 

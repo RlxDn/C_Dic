@@ -10,7 +10,7 @@ const Qtemplate=styled.main`
 `;
 const Qwrapper=styled.div`
     padding: 1rem;
-    border-bottom: 1px solid #22b8cf;
+    border-bottom: 1px solid orange;
 `;
 const Qswrapper= styled.div`
     min-height: 5rem;
